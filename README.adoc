@@ -1,0 +1,21 @@
+= vagrant nmstate
+
+This vagrant file allows to starta VM to run the Nmstate integration tests
+easily. Copy or symlink the contents of this repo to the Nmstate repo and then
+run in the Nmstate repo:
+
+[source,bash]
+----
+vagrant up
+vagrant ssh -c "nmstate/automation/run-tests.sh integ"
+----
+
+== Dependencies
+
+It needs vagrant and a few plugins. `vagrant-libvirt` was tested with version
+0.0.45. Older versions might be too old.
+
+[source,bash]
+----
+yum install vagrant vagrant-sshfs vagrant-libvirt
+----
