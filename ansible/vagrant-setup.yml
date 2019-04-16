@@ -8,8 +8,8 @@
     - name: Install dependencies
       package:
         name:
-          - docker
           - bash-completion
+          - docker
           - vim-enhanced
     - name: Add docker group
       group:
