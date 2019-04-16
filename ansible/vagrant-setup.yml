@@ -9,6 +9,8 @@
       package:
         name:
           - docker
+          - bash-completion
+          - vim-enhanced
     - name: Add docker group
       group:
         name: docker
