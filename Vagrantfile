@@ -51,10 +51,10 @@ Vagrant.configure("2") do |config|
   #
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.synced_folder ".", "/home/vagrant/nmstate", type: "sshfs"
-  config.vm.define "nmstate" do |nmstate|
-     nmstate.vm.host_name = "nmstate-dev"
+  config.vm.define "nmstate" do |project|
+     project.vm.host_name = "nmstate-dev"
  
-     nmstate.vm.provider :libvirt do |domain|
+     project.vm.provider :libvirt do |domain|
        domain.uri = 'qemu:///session'
        domain.qemu_use_session = true
        # Season to taste
